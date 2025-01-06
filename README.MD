@@ -1,6 +1,6 @@
 # Task Organizer CLI
 
-A command-line interface tool for managing tasks with features for creating, updating, completing, and exporting tasks.
+A command-line interface tool for managing tasks with features for creating, updating and completing tasks.
 
 ## Features
 
@@ -9,7 +9,6 @@ A command-line interface tool for managing tasks with features for creating, upd
 - 🔄 Update existing tasks
 - ✅ Mark tasks as completed
 - ❌ Delete tasks
-- 📊 Export tasks to JSON or CSV formats
 - 🔍 Filter tasks by completion status
 
 ## Installation
@@ -90,23 +89,6 @@ node task-organizer.js done -i 0
 
 ```bash
 node task-organizer.js delete -i 0
-```
-
-### Exporting Tasks
-
-Export as JSON:
-```bash
-node task-organizer.js export -f json -o ./exports/tasks.json
-```
-
-Export as CSV:
-```bash
-node task-organizer.js export -f csv -o ./exports/tasks.csv
-```
-
-Export only completed tasks:
-```bash
-node task-organizer.js export -f json -o ./exports/completed-tasks.json --completed
 ```
 
 ## Task Structure
