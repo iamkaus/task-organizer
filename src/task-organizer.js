@@ -60,7 +60,7 @@ const main = async () => {
             id: existingTask.id
         };
 
-        db.data.task[taskIndex] = updateTask;
+        db.data.task[taskIndex] = updatedTask;
         await db.write();
         return updatedTask;
     }
@@ -103,7 +103,7 @@ const main = async () => {
             completed_at: new Date().toISOString()
         };
 
-        db.data.tasks[taskIndex] = updateTask;
+        db.data.tasks[taskIndex] = updatedTask;
         return updatedTask;
     }
 
@@ -221,7 +221,7 @@ const main = async () => {
                 Object.keys(updatedInfo).forEach(key => updatedInfo[key] === undefined && delete updatedInfo[key]);
 
                 // Only proceed if there are actual updates
-                if (Object.keys(updates).length === 0) {
+                if (Object.keys(updatedInfo).length === 0) {
                     console.log('No updates provided');
                     return;
                 }
