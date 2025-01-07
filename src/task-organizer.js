@@ -60,7 +60,7 @@ const main = async () => {
             id: existingTask.id
         };
 
-        db.data.task[taskIndex] = updatedTask;
+        db.data.tasks[taskIndex] = updatedTask;
         await db.write();
         return updatedTask;
     }
@@ -225,7 +225,7 @@ const main = async () => {
                     console.log('No updates provided');
                     return;
                 }
-                const updatedTask = await updateTask(Number(id), updatedInfo);
+                const updatedTask = await updateTask(options.index, updatedInfo);
                 console.log('Task updated successfully:');
                 console.log(`  ID: ${updatedTask.id}`);
                 console.log(`  Name: ${updatedTask.name}`);
