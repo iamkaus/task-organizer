@@ -36,7 +36,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - N/A (Initial release)
 
 ### Fixed
-- N/A (Initial release)
+- wrong assingment in
+  - const updatedTask = await updateTask(Number(id), updatedInfo); // before
+  - const updatedTask = await updateTask(options.index, updatedInfo); // after
+  - db.data.task[taskIndex] = updatedTask; // before
+  - db.data.tasks[taskIndex] = updatedTask; // after
 
 ### Security
 - UUID implementation for secure task identification
